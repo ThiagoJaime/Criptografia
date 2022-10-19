@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+@font-face {
+    font-family: 'titulo';
+    src: url('../Plante.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+body {
+    background: linear-gradient(45deg, #B1B2FF, #AAC4FF, #D2DAFF, #EEF1FF);
+    height: 100%;
+    background-size: 300% 300%;
+    animation: animate 8s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+.cabecalho h1 {
+    font-family: 'titulo';
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: x-large;
+    text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.425);
+}
+
+.interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secction {
+    width: 90%;
+}
+
+.form {
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.507);
+    margin: 20px auto;
+    border-radius: 20px;
+    background: linear-gradient(0deg, #000, transparent);
+    opacity: 0.45;
+    transition: opacity cubic-bezier(0.895, 0.03, 0.685, 0.22) 1s;
+}
+
+.form:hover {
+    opacity: 1;
+}
+
+.form div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    text-shadow: 1px 1px 5px black;
+    margin-block: 10px;
+    padding: 5px;
+}
+
+.form div label {
+    margin-block: 10px;
+    font-family: 'Silkscreen', cursive;
+    text-align: center;
+}
+
+.secction div:nth-child(3), .secction div:nth-child(3) div {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.secction div:nth-child(3) {
+    justify-content: space-evenly;
+}
+
+.secction div:nth-child(4) textarea {
+    min-width: 200px;
+    min-height: 70px;
+    max-width: 230px;
+    max-height: 90px;
+    font-size: 1em;
+}
+
+.secction div:nth-child(6) textarea {
+    min-width: 230px;
+    min-height: 100px;
+    max-width: 280px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    resize: vertical;
+}
+
+.form select {
+    font-size: 20px;
+    width: 155px;
+    height: 50px;
+}
+
+#btn {
+    height: 45px;
+    width: 120px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: cubic-bezier(0.895, 0.03, 0.685, 0.22) .35s;
+    color: rgb(0, 0, 0);
+    font-family: 'Silkscreen', cursive !important;
+}
+
+#btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color:blue; border-color: blue;
+    text-shadow: 2px 2px 5px white;
+    background-color: rgba(0, 0, 0, 0.055);
+}
+
+#incremente {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#btn, #incremente, textarea, select {
+    border-radius: 5px;
+    outline: none;
+    text-shadow: 1px 1px 5px white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+#inputText:focus, textarea:focus, #incremente:focus {
+   border-color: rgb(4, 0, 255); 
+   background: rgba(0, 0, 0, 0.349);
+   color: white;
+}
+
+.extra {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+.cesar, .base64{
+    padding: 20px;
+    max-width: 45em;
+    margin: 1em;
+    border-radius: 3px;
+    background: linear-gradient(0deg, rgb(0, 9, 87), rgba(3, 0, 158, 0.103), transparent);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.603);
+}
+
+.cesar h2, .base64 h2{
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+}
+
+.cesar-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cesar-img img{
+    margin-block: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.521);
+    border-radius: 2px;
+    width: 100%;
+}
+
+.base64 img{
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    margin-top: 12px;
+    width: 100%;
+}
+
+
+@keyframes animate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (min-width: 500px){
+    .secction {
+        width: 70%;
+    }
+    
+    .cabecalho h1 {
+        font-size: 2.5em;
+    }
+
+    .form div label {
+        font-size: 140%;
+    }
+
+    .form select {
+        width: 140px;
+        height: 60px;
+    }
+
+    .secction div:nth-child(4) textarea {
+        min-width: 250px;
+        min-height: 70px;
+        max-width: 280px;
+        max-height: 85px;
+        font-size: 1.1em;
+    }
+
+    #btn {
+        height: 55px;
+        width: 165px;
+        font-size: 18px;
+    }
+
+    .secction div:nth-child(6) textarea {
+        min-width: 290px;
+        min-height: 100px;
+        max-width: 330px;
+    }
+
+    .cesar-img img {
+        width: initial;
+    } 
+}
+
+@media (min-width: 910px){
+    .secction {
+        width: 60%;
+    }
+    
+    .cabecalho h1 {
+        font-size: 3.5em;
+    }
+
+    .form div label {
+        font-size: 200%;
+    }
+
+    .form select {
+        width: 170px;
+        height: 80px;
+    }
+
+    .secction div:nth-child(4) textarea {
+        min-width: 300px;
+        min-height: 90px;
+        max-width: 320px;
+        max-height: 100px;
+        font-size: 1.2em;
+    }
+
+    #btn {
+        height: 70px;
+        width: 195px;
+        font-size: 25px;
+    }
+
+    .secction div:nth-child(6) textarea {
+        min-width: 365px;
+        min-height: 120px;
+        max-width: 400px;
+        font-size: 20px;
+    }
+
+    .extra {
+        display: flex;
+    }
+    
+    .extra div{
+        height: max-content;
+    }
+}
+
+
