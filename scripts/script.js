@@ -15,7 +15,7 @@ const requerid = document.querySelectorAll('.requerid');
 // event click to encrypt caesar or base64 |
 btn.addEventListener('click', function () {
 
-    if (increment.value == "") {
+    if (increment.value == "" && inputOp.value == "2") {
         requerid[0].style.display = 'block';
     } else if (changeCod.checked && inputOp.value == "1") {
         result.innerText = baseInc(inputText.value)
