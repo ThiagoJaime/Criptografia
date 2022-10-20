@@ -9,13 +9,15 @@ const inputText = document.getElementById('inputText');
 const result = document.getElementById('resultado');
 const increment = document.getElementById('incremente');
 const inputOp = document.getElementById('inputOp');
+const requerid = document.querySelectorAll('.requerid');
 // ------------------------------------------------- ||
 
-
-// event click to encrypt caesar or base64
+// event click to encrypt caesar or base64 |
 btn.addEventListener('click', function () {
-    
-    if (changeCod.checked && inputOp.value == "1") {
+
+    if (increment.value == "") {
+        requerid[0].style.display = 'block';
+    } else if (changeCod.checked && inputOp.value == "1") {
         result.innerText = baseInc(inputText.value)
     } else if (changeCod.checked && inputOp.value == "2") {
         result.innerText = codeCaesar(inputText.value, parseInt(increment.value))
@@ -23,7 +25,24 @@ btn.addEventListener('click', function () {
         result.innerText = baseDesc(inputText.value)
     } else if (changeDesc.checked && inputOp.value == "2") {
         result.innerText = caesarDesc(inputText.value, parseInt((increment.value)))
-    } 
+    }
+
+    // Validações |
+    if (inputText.value == "" && increment.value == "") {
+        requerid[0].style.display = 'block';
+        requerid[1].style.display = 'block';
+    } else if (inputText.value == "") {
+        requerid[1].style.display = 'block';
+        requerid[0].style.display = 'none';
+    } else if (inputText.value != "" && increment.value != "") {
+        requerid[0].style.display = 'none';
+        requerid[1].style.display = 'none';
+    } else if (increment.value != "") {
+        requerid[0].style.display = 'none';
+    } else if (inputText.value != "") {
+        requerid[1].style.display = 'none';
+    }
+    // ---------------------------------------------------------- ||
 });
 // --------------------------------------------------------------------------- ||
 

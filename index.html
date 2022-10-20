@@ -10,12 +10,22 @@
     <title>CRIPTOGRAFIA</title>
 </head>
 <body>
+    <!-- HEADER -->
     <header class="cabecalho">
         <h1>Codificacao de Textos em Cifra de Cesar e Base 64</h1>
     </header>    
+    <!-- |\|/|\|/|\|/|/|\|/ -->
+    
+
+    <!-- CONTEUDO PRINCIPAL -->
     <main class="interface">
+        
+        <!-- 1º SEÇÃO -->
         <section class="secction for">
+            
+            <!-- INICIO DO FORM -->
             <form class="form">
+                <!-- DIV OPÇÕES -->
                 <div>
                 <label for="InputOp">Tipos de codificação:</label>
                     <select id="inputOp">
@@ -23,10 +33,13 @@
                         <option value="2">Cifra de césar</option>
                     </select>
                 </div>
+                <!-- DIV "ESCONDIDA" - APARECERÁ SE A CIFRA FOR ESCOLHIDA -->
                 <div style="display: none;" id="inputIncrement">
                     <label for="incremente">quantidade de saltos:</label>
                     <input type="number" min="1" id="incremente">
+                    <span class="requerid">Digite os saltos!</span>
                 </div>
+                <!-- DIV DECODIFICAR/CODIFICAR -->
                 <div style="margin-bottom: 0; padding-bottom: 0;">
                     <div>
                         <input checked type="radio" id="changeCod" value="changeCod" name="codDesc" onchange="cod()">
@@ -37,32 +50,40 @@
                         <label for="changeDesc">Decodificar</label>
                     </div>   
                 </div>
+                <!-- DIV INPUT TEXT DO USUÁRIO -->
                 <div style="margin-top: 0;">
                     <label for="inputText">Digite o texto:</label>
                     <textarea style="text-align: center;" type="text" id="inputText" placeholder="Insira Aqui"></textarea>
+                    <span class="requerid">Digite o texto!</span>
                 </div>
+                <!-- DIV DO BOTÃO -->
                 <div>
                     <input type="button" value="Codificar" id="btn">
                 </div>
+                <!-- DIV DO RESULTADO -->
                 <div>
                     <textarea readonly id="resultado" placeholder="Resultado"></textarea>
                 </div>
             </form>
         </section>
 
+        <!-- 2º SEÇÃO -->
         <section class="extra">
-            <div class="cesar">
+            <!-- ARTICLE SOBRE CÉSAR -->
+            <article class="cesar">
                 <h2>Sobre a Cifra de César</h2>
                 <p>
                     A cifra de César é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes. Por exemplo, com uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.
                     É claro, não necessariamente devemos seguir esta ordem de substituição das letras, mas podemos usar a lógica da cifra e trabalhar da maneira que quisermos no desenvolver da aplicação.
                 </p>
+                <!-- DIV IMG DE CÉSAR -->
                 <div class="cesar-img">
                     <img src="./IMGs/caesar-cipher-int-cript.jpg" width="300px" height="300px" alt="imagem exemplo do método de cripgrafia">
                 </div>
-            </div>
-    
-            <div class="base64">
+            </article>
+            
+            <!-- ARTICLE SOBRE BASE64 -->
+            <article class="base64">
                 <h2>Sobre a Base64</h2>
                 <p>
                     Base64 é um algoritmo de codificação (encoding) que permite transformar qualquer caractere de qualquer idioma em um alfabeto que consiste em letras latinas, dígitos e sinais. Com isso podemos converter caracteres especiais como os logogramas chineses, emoji e até imagens em uma sequência “legível” (para qualquer computador), que pode ser salvo e/ou transferido para qualquer outro lugar. 
@@ -70,10 +91,12 @@
                     Seu alfabeto é constituído por 64 caracteres ([A-Z],[a-z],[0-9], “/” e “+”), o que deu  origem ao seu nome.
                 </p>
                 <img src="./IMGs/base64.png" alt="">
-            </div>
+            </article>
         </section>
     </main>
     
+    <!-- SCRIPT -->
     <script src="./scripts/script.js"></script>
+    <!-- |\|/|\|/|\|/|/|\|/ -->
 </body>
 </html>
