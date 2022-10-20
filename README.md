@@ -6,7 +6,7 @@
 * [x] Javascript
 * [x] CSS3
 * [x] HTML5
-### 🔎 Fontes pesquisadas e usadas:
+### 🔎 Fontes de pesquisada:
 - MDN Web Docs
 - W3School
 - Udemy
