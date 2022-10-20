@@ -1,2 +1,2 @@
 # Criptografia
- 
+~~a~~
