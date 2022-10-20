@@ -16,6 +16,22 @@
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
+/**SCROLL**/
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track {
+    background-color: #000;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0004ffbd, #cc00ffc0);
+    border-radius: 20px;
+}
+/*-----------------------------------------------------------*/
+
 body {
     background: linear-gradient(45deg, #B1B2FF, #AAC4FF, #D2DAFF, #EEF1FF);
     height: 100%;

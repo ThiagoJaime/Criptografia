@@ -28,13 +28,13 @@ btn.addEventListener('click', function () {
     }
 
     // Validações |
-    if (inputText.value == "" && increment.value == "") {
+    if (inputText.value == "" && increment.value == "" && inputOp.value == "2") {
         requerid[0].style.display = 'block';
         requerid[1].style.display = 'block';
     } else if (inputText.value == "") {
         requerid[1].style.display = 'block';
         requerid[0].style.display = 'none';
-    } else if (inputText.value != "" && increment.value != "") {
+    } else if (inputText.value != "" && increment.value != "" && inputOp.value == "2") {
         requerid[0].style.display = 'none';
         requerid[1].style.display = 'none';
     } else if (increment.value != "") {
